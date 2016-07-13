@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="login" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_login2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5Yd-Ik-OrR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUp-Gg-pOV">
+                                <rect key="frame" x="35" y="393" width="250" height="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf8-YK-LcM">
+                                <rect key="frame" x="87" y="431" width="146" height="30"/>
+                                <color key="backgroundColor" red="0.67609413915553729" green="0.23943786040480586" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.92776442307692297" green="0.60527383965704507" blue="0.72854590414978915" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="0.89344632099999999" blue="0.19018909340000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action_login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zvo-rf-70g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwF-g0-RYI">
+                                <rect key="frame" x="35" y="496" width="121" height="39"/>
+                                <color key="backgroundColor" red="0.63918898307834482" green="0.18440785828915052" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Delete Account">
+                                    <color key="titleColor" red="1" green="0.89344632099999999" blue="0.19018909340000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action_delAcc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmG-88-TA4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agw-e2-Uk1">
+                                <rect key="frame" x="165" y="496" width="121" height="39"/>
+                                <color key="backgroundColor" red="0.6518863671825621" green="0.20195781588675821" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Update Account">
+                                    <color key="titleColor" red="1" green="0.89344632099999999" blue="0.19018909340000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action_updateAcc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFI-qt-z6W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MQ-Z0-tEF">
+                                <rect key="frame" x="87" y="463" width="146" height="30"/>
+                                <color key="backgroundColor" red="0.67609413915553729" green="0.23943786040480586" blue="1" alpha="0.86301185344827591" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="List of Users">
+                                    <color key="titleColor" red="1" green="0.89344632099999999" blue="0.19018909340000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="action_viewListOfUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9JX-og-1hk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHP-sA-kzz">
+                                <rect key="frame" x="35" y="363" width="250" height="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.27949742315839832" blue="0.46962445546200138" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_del" destination="GwF-g0-RYI" id="pgU-wE-TOL"/>
+                        <outlet property="btn_update" destination="agw-e2-Uk1" id="zN3-dx-5Xo"/>
+                        <outlet property="tf_password" destination="NUp-Gg-pOV" id="Lxi-Ad-NFu"/>
+                        <outlet property="tf_user" destination="YHP-sA-kzz" id="8m0-7i-FFx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="396"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_login2.jpg" width="450" height="750"/>
+    </resources>
 </document>
